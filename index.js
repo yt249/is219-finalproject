@@ -113,12 +113,28 @@ app.use("/", authRouter);
  * Routes Definitions
  */
 
-const secured = (req, res, next) => {
+const authenticateJWT = (req, res, next) => {
+    console.log("authenticating");
     if (req.user) {
-        return next();
+        const authHeader = res._headers.authorization;
+        console.log(authHeader);
+        if (authHeader) {
+            const token = authHeader.split(' ')[1];
+            jwt.verify(token, accessTokenSecret, (err, user) => {
+                if (err) {
+                    return res.sendStatus(403);
+                }
+                req.user = user;
+                next();
+            });
+        } else {
+            res.sendStatus(401);
+        }
+    } else {
+        console.log("Failed to validate token!");
+        req.session.returnTo = req.originalUrl;
+        res.redirect("/login");
     }
-    req.session.returnTo = req.originalUrl;
-    res.redirect("/login");
 };
 
 app.get("/", (req, res) => {
