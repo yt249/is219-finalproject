@@ -21,3 +21,6 @@
 
 - Both profile and db pages are secured by JWT(shown in console for test purpose) <br />
 ![page](https://github.com/yt249/is219-finalproject/blob/master/img/authenticate%20and%20jwt.png)
+
+- 
+![page](https://github.com/yt249/is219-finalproject/blob/master/img/fail%20to%20auth.png)
