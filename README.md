@@ -1,15 +1,20 @@
-# Create Simple, Secure, and Stylish Node Apps with Express
+## 2021 AUTH0 + JWT + MYSQL
+#### IS219 Final Yu-Ching Tseng
+##### Use Auth0 universal login, generate JWT to secure profile and db routes
 
 ## ScreenShots 
 
 - This is the page you see before login: <br />
-![page](https://github.com/yt249/is219-finalproject/blob/starter/img/before%20login.png)
+![page](https://github.com/yt249/is219-finalproject/blob/master/img/main%20page.png)
 
-- This is the login age: <br />
-![page](https://github.com/yt249/Express-Passport-Authentication-with-Auth0/blob/starter/img/login%20page.png)
+- This is the first page user will see after login: <br />
+![page](https://github.com/yt249/is219-finalproject/blob/master/img/login%20page.png)
 
-- This is the first page you see after login: <br />
-![page](https://github.com/yt249/Express-Passport-Authentication-with-Auth0/blob/starter/img/after%20login1.png)
+- This is the personal profile page user can see after login: <br />
+![page](https://github.com/yt249/is219-finalproject/blob/master/img/profile.png)
 
-- This is the second page you see after login: <br />
-![page](https://github.com/yt249/Express-Passport-Authentication-with-Auth0/blob/starter/img/after%20login2.png)
+- This is the db page user can see after login: <br />
+![page](https://github.com/yt249/is219-finalproject/blob/master/img/db.png)
+
+- Both profile and db pages are secured by JWT(shown in console for test purpose) <br />
+![page](https://github.com/yt249/is219-finalproject/blob/master/img/authenticate%20and%20jwt.png)
