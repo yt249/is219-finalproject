@@ -8,7 +8,7 @@
 ![page](https://github.com/yt249/is219-finalproject/blob/master/img/main%20page.png)
 
 - This is the auth0 page user login: <br />
-![page](https://github.com/yt249/is219-finalproject/blob/master/img/login%20page.png)
+![page](https://github.com/yt249/is219-finalproject/blob/master/img/auth0.png)
 
 - This is the first page user will see after login: <br />
 ![page](https://github.com/yt249/is219-finalproject/blob/master/img/login%20page.png)
