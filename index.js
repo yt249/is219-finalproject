@@ -141,11 +141,22 @@ app.get("/", (req, res) => {
   res.render("index", { title: "Home" });
 });
 
-app.get("/user", secured, (req, res, next) => {
+app.get("/user", authenticateJWT, (req, res, next) => {
     const { _raw, _json, ...userProfile } = req.user;
     res.render("user", {
         title: "Profile",
         userProfile: userProfile
+    });
+    next();
+});
+
+app.get('/db', authenticateJWT, function(req, res, next) {
+    request("http://localhost:8000/api/v1/cities", function (err, response, body) {
+        if (err || response.statusCode !== 200) {
+            return res.sendStatus(500);
+        }
+        res.render('db', { title : 'Main page', citiesjson : JSON.parse(body).data });
+        next();
     });
 });
 
