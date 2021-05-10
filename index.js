@@ -92,6 +92,17 @@ passport.deserializeUser((user, done) => {
 // Creating custom middleware with Express
 app.use((req, res, next) => {
     res.locals.isAuthenticated = req.isAuthenticated();
+    // console.log(req.isAuthenticated());
+    if (req.user) {
+        if(typeof(res._headers.authorization) === "undefined") {
+            const accessToken = jwt.sign(req.user._json, accessTokenSecret, {expiresIn: '20m'});
+            res.setHeader('Authorization', 'Bearer ' + accessToken);
+        }
+    }else if (!req.user){
+        try {
+            res.setHeader('Authorization', ' ');
+        }catch{}
+    }
     next();
 });
 
