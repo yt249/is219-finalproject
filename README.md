@@ -1,6 +1,6 @@
 # 2021 AUTH0 + JWT + MYSQL
-#### IS219 Final Yu-Ching Tseng
-##### Use Auth0 universal login, generate JWT to secure profile and db routes
+#### [IS219 Final] Yu-Ching Tseng
+#### Use Auth0 universal login, generate JWT to secure profile and db routes
 
 ## ScreenShots 
 
