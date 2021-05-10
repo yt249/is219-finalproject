@@ -10,6 +10,11 @@ const path = require("path");
 const expressSession = require("express-session");
 const passport = require("passport");
 const Auth0Strategy = require("passport-auth0");
+const request = require('request');
+var cors = require('cors');
+const jwt = require('jsonwebtoken');
+
+const accessTokenSecret = 'youraccesstokensecret';
 
 require("dotenv").config();
 
