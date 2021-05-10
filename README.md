@@ -24,5 +24,5 @@
 
 ## JWT successfully block a un-authorized login
 **Red**: successfully get a token after login <br />
-**Blue**: if the user hasn't login, and attempt to browse to localhost:3000/user, there is no JWT detected, thus, redirect the user to the login page <br /> 
+**Green**: if the user hasn't login, and attempt to browse to localhost:3000/user, there is no JWT detected, thus, redirect the user to the login page <br /> 
 ![page](https://github.com/yt249/is219-finalproject/blob/master/img/fail%20to%20auth.png)
